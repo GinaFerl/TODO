@@ -1,4 +1,4 @@
-package com.gferl.ginaukk;
+package com.gferl.todoapplication;
 
 import org.junit.Test;
 
