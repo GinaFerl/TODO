@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GinaUKK">
-        <activity android:name="com.gferl.todoapplication.OnBoarding"></activity>
-        <activity android:name="com.gferl.todoapplication.MainActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".add_activity"></activity>
+        <activity android:name=".OnBoarding" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

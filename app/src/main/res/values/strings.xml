@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">ToDo Apps</string>
+    <string name="app_name">JustApp</string>
 
-    <!--Nama Menu Bottom Navigation-->
+    <string name="demo_content">Lorem ipsum dolor sit amet, consectetur\n adipiscing elit. Vivamus sodales faucibus\n dapibus. Etiam mattis leo quis laoreet dictum.</string>
+    <string name="demo_title">Lorem Ipsum</string>
+    <string name="next">Next</string>
     <string name="home">Home</string>
     <string name="add">Add</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

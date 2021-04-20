@@ -11,4 +11,11 @@
         android:id="@+id/rv_todo"
         tools:listitem=""/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_add_23" />
 </RelativeLayout>
