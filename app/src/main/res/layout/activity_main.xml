@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,9 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@drawable/state_bnve"
+        android:background="#90C5EF"
+        app:itemIconTint="@drawable/state_bnv"
         app:itemTextColor="@drawable/state_bnv"
-        app:menu="@menu/bottomnavigation_menu" />
+        app:menu="@menu/bottomnavigation_menu"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
