@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".add_activity"
+    tools:context=".EditTodo"
     tools:ignore="VectorDrawableCompat">
 
 
@@ -12,36 +12,17 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="132dp"
         android:fontFamily="sans-serif"
-        android:text="From Tambah"
-        android:textColor="#000"
+        android:text="From Edit"
         android:textAlignment="center"
+        android:textColor="#000"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.373" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
-
-
-
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.896" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout4"
@@ -72,20 +53,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:layout_margin="10dp"
                     android:text="Nama Kegiatan"
-                    android:textColor="#19BD29"
+                    android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/nameTodo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textColorHint="#170C0C0C" />
+
+                <CheckBox
+                    android:id="@+id/cb_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Selesai"/>
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -102,24 +91,24 @@
             android:elevation="10dp">
 
             <Button
-                android:id="@+id/btn_tmbh"
+                android:id="@+id/btn_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#130F73"
-                android:text="Masuk"
+                android:text="Perbarui"
                 android:textColor="#FFFFFF"
-                android:textAllCaps="false"
-                 />
+                android:textAllCaps="false"/>
 
             <Button
-                android:id="@+id/btRegister"
+                android:id="@+id/btn_delete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="65dp"
                 android:background="#130F73"
                 android:textColor="#FFFFFF"
-                android:text="Daftar"
+                android:text="Hapus"
                 android:textAllCaps="false" />
+
         </RelativeLayout>
     </RelativeLayout>
 

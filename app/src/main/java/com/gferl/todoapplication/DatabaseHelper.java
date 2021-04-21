@@ -40,6 +40,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("create table todo_table(id integer primary key autoincrement, "+
                 "name text, "+
                 "status integer);");
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2, "Makan makan enak");
+        contentValues.put(COL_3, "0");
+
+        sqLiteDatabase.insert(TABLE_NAME, null, contentValues);
     }
 
     @Override
@@ -69,7 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return toDos;
     }
 
-    public boolean insertData (String name, String status) {
+    public boolean insertData (String name, int status) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -106,5 +112,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         return db.delete(TABLE_NAME, "ID = ?", new String[]{id});
+    }
+
+    public List<ToDo> searchData(String keyword) {
+
+        List<ToDo> toDos = new ArrayList<>();
+        String selectQuery = "SELECT * FROM TODO_TABLE WHERE NAME LIKE ?";
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = database.rawQuery(selectQuery, new String[]{"%" + keyword + "%"});
+        if (cursor.moveToFirst()) {
+            do {
+                ToDo todo = new ToDo();
+                todo.setId_todo(cursor.getString(0));
+                todo.setName_todo(cursor.getString(1));
+                todo.setStatus_todo(cursor.getString(2));
+                toDos.add(todo);
+            } while (cursor.moveToNext());
+        }
+
+        database.close();
+        return toDos;
     }
 }
